@@ -270,14 +270,16 @@ function activatePads(sequence) {
  * sequence.
  */
  function playComputerTurn() {
-   padContainer.classList.add("unclickable");
-  setText(statusSpan, "The computer's turn...");
+  padContainer.classList.add("unclickable");
+  setText(statusSpan, "The computer's turn!!");
   setText(heading, `Round ${roundCount} of ${maxRoundCount}`);
-    const randomColor = getRandomItem(["red", "green", "blue","yellow" ]);
-   computerSequence.push(randomColor);
-   activatePads(computerSequence);
-  setTimeout(() => playHumanTurn(), roundCount * 600 + 1000); 
- }
+  const randomColor = getRandomItem(["red", "green", "blue", "yellow"]);
+  computerSequence.push(randomColor);
+
+  activatePads(computerSequence);
+
+  setTimeout(() => playHumanTurn(), roundCount * 600 + 1000);
+}
 
 
 /**
