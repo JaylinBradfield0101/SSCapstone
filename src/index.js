@@ -88,11 +88,12 @@ function startButtonHandler() {
     statusSpan.classList.remove("hidden");
   
     playComputerTurn();
-  }
+  
   return {
     startButton: startButton,
     statusSpan: statusSpan,
-  }
+  };
+}
   // TODO: Write your code here.
   
 
